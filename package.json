@@ -1,6 +1,6 @@
 {
   "name": "default-resolution",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get the default resolution time based on the current node version, optionally overridable",
   "author": "Blaine Bublitz <blaine@iceddev.com> (http://iceddev.com)",
   "contributors": [
