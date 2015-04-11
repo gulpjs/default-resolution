@@ -1,0 +1,32 @@
+{
+  "name": "default-resolution",
+  "version": "0.0.0",
+  "description": "Get the default resolution time based on the current node version, optionally overridable",
+  "author": "Blaine Bublitz <blaine@iceddev.com> (http://iceddev.com)",
+  "contributors": [
+    "Damien Lebrun <dinoboff@hotmail.com>"
+  ],
+  "repository": "phated/default-resolution",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "main": "index.js",
+  "files": [
+    "LICENSE",
+    "index.js",
+    "node-version.js"
+  ],
+  "scripts": {
+    "test": "lab -cvL"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "code": "^1.4.0",
+    "lab": "^5.5.1"
+  },
+  "keywords": [
+    "resolution",
+    "timing"
+  ]
+}
