@@ -1,5 +1,7 @@
 # default-resolution
 
+[![Travis Build Status](https://img.shields.io/travis/phated/default-resolution/master.svg?label=travis&style=flat-square)](https://travis-ci.org/phated/default-resolution)
+
 Get the default resolution time based on the current node version, optionally overridable
 
 Originally implemented by @dinoboff in https://github.com/phated/undertaker/pull/17
