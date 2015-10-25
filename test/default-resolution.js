@@ -7,7 +7,7 @@ var defaultResolution = require('../');
 var nodeVersion = require('../node-version');
 
 lab.describe('defaultResolution', function() {
-  // typically I don't unit test helpers, but this reduces the last run tests
+  // Typically I don't unit test helpers, but this reduces the last run tests
   var major = nodeVersion.major;
   var minor = nodeVersion.minor;
 
