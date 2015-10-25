@@ -6,7 +6,7 @@
   "contributors": [
     "Damien Lebrun <dinoboff@hotmail.com>"
   ],
-  "repository": "phated/default-resolution",
+  "repository": "gulpjs/default-resolution",
   "license": "MIT",
   "engines": {
     "node": ">= 0.10"
@@ -18,11 +18,16 @@
     "node-version.js"
   ],
   "scripts": {
-    "test": "lab -cvL"
+    "lint": "eslint . && jscs *.js test/",
+    "test": "lab -cv"
   },
   "dependencies": {},
   "devDependencies": {
     "code": "^1.4.0",
+    "eslint": "^1.7.3",
+    "eslint-config-gulp": "^2.0.0",
+    "jscs": "^2.4.0",
+    "jscs-preset-gulp": "^1.0.0",
     "lab": "^5.5.1"
   },
   "keywords": [
