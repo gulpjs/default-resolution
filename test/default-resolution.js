@@ -6,6 +6,16 @@ var code = require('code');
 var defaultResolution = require('../');
 var nodeVersion = require('../node-version');
 
+lab.describe('nodeVersion', function() {
+
+  lab.it('has all integers and not strings', function(done) {
+    code.expect(nodeVersion.major).to.be.a.number();
+    code.expect(nodeVersion.minor).to.be.a.number();
+    code.expect(nodeVersion.patch).to.be.a.number();
+    done();
+  });
+});
+
 lab.describe('defaultResolution', function() {
   // Typically I don't unit test helpers, but this reduces the last run tests
   var major = nodeVersion.major;
