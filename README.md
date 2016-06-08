@@ -14,8 +14,8 @@ Split out for standalone use.
 var defaultResolution = require('default-resolution');
 
 defaultResolution();
-//-> 1000 in node 0.10
-//-> 0 in node 0.11+
+//-> 1000 (1 second) in node 0.10
+//-> 1 (millisecond) in node 0.11+
 
 // use a different value
 defaultResolution(12);

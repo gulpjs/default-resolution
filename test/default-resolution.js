@@ -27,31 +27,31 @@ lab.describe('defaultResolution', function() {
     done();
   });
 
-  lab.it('should return default resolution to 1000 on node v0.10', function(done) {
+  lab.it('should return default resolution to 1000 (1 second) on node v0.10', function(done) {
     nodeVersion.major = 0;
     nodeVersion.minor = 10;
     code.expect(defaultResolution()).to.equal(1000);
     done();
   });
 
-  lab.it('should return default resolution to 0 on node v0.11', function(done) {
+  lab.it('should return default resolution to 1 (millisecond) on node v0.11', function(done) {
     nodeVersion.major = 0;
     nodeVersion.minor = 11;
-    code.expect(defaultResolution()).to.equal(0);
+    code.expect(defaultResolution()).to.equal(1);
     done();
   });
 
-  lab.it('should return default resolution to 0 on node v0.12', function(done) {
+  lab.it('should return default resolution to 1 (millisecond) on node v0.12', function(done) {
     nodeVersion.major = 0;
     nodeVersion.minor = 12;
-    code.expect(defaultResolution()).to.equal(0);
+    code.expect(defaultResolution()).to.equal(1);
     done();
   });
 
-  lab.it('should return default resolution to 0 on iojs v1.5', function(done) {
+  lab.it('should return default resolution to 1 (millisecond) on iojs v1.5', function(done) {
     nodeVersion.major = 1;
     nodeVersion.minor = 1;
-    code.expect(defaultResolution()).to.equal(0);
+    code.expect(defaultResolution()).to.equal(1);
     done();
   });
 
