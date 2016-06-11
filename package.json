@@ -2,8 +2,9 @@
   "name": "default-resolution",
   "version": "1.0.1",
   "description": "Get the default resolution time based on the current node version, optionally overridable",
-  "author": "Blaine Bublitz <blaine@iceddev.com> (http://iceddev.com)",
+  "author": "Gulp Team <team@gulpjs.com> (http://gulpjs.com/)",
   "contributors": [
+    "Blaine Bublitz <blaine.bublitz@gmail.com>",
     "Damien Lebrun <dinoboff@hotmail.com>"
   ],
   "repository": "gulpjs/default-resolution",
