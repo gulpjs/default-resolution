@@ -1,10 +1,16 @@
+<p align="center">
+  <a href="http://gulpjs.com">
+    <img height="257" width="114" src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png">
+  </a>
+</p>
+
 # default-resolution
 
-[![Travis Build Status](https://img.shields.io/travis/gulpjs/default-resolution/master.svg?label=travis&style=flat-square)](https://travis-ci.org/gulpjs/default-resolution)
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![AppVeyor Build Status][appveyor-image]][appveyor-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Gitter chat][gitter-image]][gitter-url]
 
-Get the default resolution time based on the current node version, optionally overridable
+Get the default resolution time based on the current node version, optionally overridable.
 
-Originally implemented by @dinoboff in https://github.com/gulpjs/undertaker/pull/17
+Originally implemented by [@dinoboff][dinoboff] in [gulpjs/undertaker#17][original].
 
 Split out for standalone use.
 
@@ -22,7 +28,15 @@ defaultResolution(12);
 //-> 12 always
 ```
 
-## Default resolutions
+## API
+
+### `defaultResolution([resolution])`
+
+Returns the default resolution, based on the node platform. See [Default resolution table][default-table] below for resolutions.
+
+Optionally takes a resolution number to force override any platform resolutions.
+
+### Default resolutions
 
 | node version | resolution |
 |--------------|------------|
@@ -34,3 +48,23 @@ More information at https://github.com/gulpjs/undertaker/pull/17#issuecomment-82
 # License
 
 MIT
+
+[dinoboff]: https://github.com/dinoboff
+[original]: https://github.com/gulpjs/undertaker/pull/17
+[default-table]: #default-resolutions
+
+[downloads-image]: http://img.shields.io/npm/dm/default-resolution.svg
+[npm-url]: https://www.npmjs.com/package/default-resolution
+[npm-image]: http://img.shields.io/npm/v/default-resolution.svg
+
+[travis-url]: https://travis-ci.org/gulpjs/default-resolution
+[travis-image]: http://img.shields.io/travis/gulpjs/default-resolution.svg?label=travis-ci
+
+[appveyor-url]: https://ci.appveyor.com/project/gulpjs/default-resolution
+[appveyor-image]: https://img.shields.io/appveyor/ci/gulpjs/default-resolution.svg?label=appveyor
+
+[coveralls-url]: https://coveralls.io/r/gulpjs/default-resolution
+[coveralls-image]: http://img.shields.io/coveralls/gulpjs/default-resolution/master.svg
+
+[gitter-url]: https://gitter.im/gulpjs/gulp
+[gitter-image]: https://badges.gitter.im/gulpjs/gulp.svg
