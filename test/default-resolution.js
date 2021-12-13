@@ -1,59 +1,85 @@
 'use strict';
 
 var expect = require('expect');
+var sinon = require('sinon');
 
-var defaultResolution = require('../');
-var nodeVersion = require('../node-version');
+var originalCacheKeys = Object.keys(require.cache);
 
-describe('nodeVersion', function () {
-  it('has all integers and not strings', function (done) {
-    expect(typeof nodeVersion.major).toEqual('number');
-    expect(typeof nodeVersion.minor).toEqual('number');
-    expect(typeof nodeVersion.patch).toEqual('number');
-    done();
-  });
-});
+function cleanupCache(key) {
+  if (originalCacheKeys.indexOf(key) === -1) {
+    delete require.cache[key];
+  }
+}
+
+function cleanup(done) {
+  // restore the require.cache to startup state
+  Object.keys(require.cache).forEach(cleanupCache);
+
+  done();
+}
 
 describe('defaultResolution', function () {
-  // Typically I don't unit test helpers, but this reduces the last run tests
-  var major = nodeVersion.major;
-  var minor = nodeVersion.minor;
+  afterEach(cleanup);
 
-  afterEach(function (done) {
-    nodeVersion.major = major;
-    nodeVersion.minor = minor;
+  it('should return default resolution to 1 (millisecond) on supported platforms', function (done) {
+    var defaultResolution = require('../');
+
+    expect(defaultResolution()).toEqual(1);
     done();
   });
 
   it('should return default resolution to 1000 (1 second) on node v0.10', function (done) {
-    nodeVersion.major = 0;
-    nodeVersion.minor = 10;
+    // Only stub around the import of the module
+    var stub = sinon.stub(process, 'version').value('v0.10.0');
+
+    var defaultResolution = require('../');
+
+    stub.restore();
+
     expect(defaultResolution()).toEqual(1000);
+
     done();
   });
 
   it('should return default resolution to 1 (millisecond) on node v0.11', function (done) {
-    nodeVersion.major = 0;
-    nodeVersion.minor = 11;
+    // Only stub around the import of the module
+    var stub = sinon.stub(process, 'version').value('v0.11.0');
+
+    var defaultResolution = require('../');
+
+    stub.restore();
+
     expect(defaultResolution()).toEqual(1);
     done();
   });
 
   it('should return default resolution to 1 (millisecond) on node v0.12', function (done) {
-    nodeVersion.major = 0;
-    nodeVersion.minor = 12;
+    // Only stub around the import of the module
+    var stub = sinon.stub(process, 'version').value('v0.12.0');
+
+    var defaultResolution = require('../');
+
+    stub.restore();
+
     expect(defaultResolution()).toEqual(1);
     done();
   });
 
   it('should return default resolution to 1 (millisecond) on node v4.3', function (done) {
-    nodeVersion.major = 4;
-    nodeVersion.minor = 3;
+    // Only stub around the import of the module
+    var stub = sinon.stub(process, 'version').value('v4.3.0');
+
+    var defaultResolution = require('../');
+
+    stub.restore();
+
     expect(defaultResolution()).toEqual(1);
     done();
   });
 
   it('should return default resolution passed as argument', function (done) {
+    var defaultResolution = require('../');
+
     expect(defaultResolution(2000)).toEqual(2000);
     done();
   });
