@@ -9,7 +9,7 @@ function defaultResolution(customResolution) {
     return resolution;
   }
 
-  return (nodeVersion.major === 0 && nodeVersion.minor <= 10) ? 1000 : 1;
+  return nodeVersion.major === 0 && nodeVersion.minor <= 10 ? 1000 : 1;
 }
 
 defaultResolution.nodeVersion = nodeVersion;

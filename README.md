@@ -39,7 +39,7 @@ Optionally takes a resolution number to force override any platform resolutions.
 ### Default resolutions
 
 | node version | resolution |
-|--------------|------------|
+| ------------ | ---------- |
 | 0.10         | 1s         |
 | 0.11+        | 1ms        |
 
@@ -48,7 +48,6 @@ More information at https://github.com/gulpjs/undertaker/pull/17#issuecomment-82
 # License
 
 MIT
-
 
 <!-- prettier-ignore-start -->
 [downloads-image]: https://img.shields.io/npm/dm/default-resolution.svg?style=flat-square
