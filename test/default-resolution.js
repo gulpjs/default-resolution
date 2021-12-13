@@ -8,9 +8,9 @@ var nodeVersion = require('../node-version');
 describe('nodeVersion', function() {
 
   it('has all integers and not strings', function(done) {
-    expect(nodeVersion.major).toBeA('number');
-    expect(nodeVersion.minor).toBeA('number');
-    expect(nodeVersion.patch).toBeA('number');
+    expect(typeof nodeVersion.major).toEqual('number');
+    expect(typeof nodeVersion.minor).toEqual('number');
+    expect(typeof nodeVersion.patch).toEqual('number');
     done();
   });
 });
