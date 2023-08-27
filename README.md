@@ -55,7 +55,7 @@ MIT
 [npm-image]: https://img.shields.io/npm/v/default-resolution.svg?style=flat-square
 
 [ci-url]: https://github.com/gulpjs/default-resolution/actions?query=workflow:dev
-[ci-image]: https://img.shields.io/github/workflow/status/gulpjs/default-resolution/dev?style=flat-square
+[ci-image]: https://img.shields.io/github/actions/workflow/status/gulpjs/default-resolution/dev.yml?branch=master&style=flat-square
 
 [coveralls-url]: https://coveralls.io/r/gulpjs/default-resolution
 [coveralls-image]: https://img.shields.io/coveralls/gulpjs/default-resolution/master.svg?style=flat-square
